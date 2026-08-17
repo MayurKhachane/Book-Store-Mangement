@@ -25,7 +25,6 @@ jobs:
         java-version: '17'
         cache: 'maven'      # Caches Maven dependencies to make future builds faster
 
-    # Step 3: Build and test the project using Maven Wrapper (mvnw)
-    # Note: Using ./mvnw is best practice because it uses the project's built-in Maven version
+   # Step 3: Build and test using standard global Maven (mvn) instead of ./mvnw
     - name: Build and Test with Maven
-      run: ./mvnw clean verify
+      run: mvn clean verify
